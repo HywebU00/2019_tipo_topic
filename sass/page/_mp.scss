@@ -1,62 +1,718 @@
-/////////////////////////////////////////////////////////以下為demo範例///
-// 首頁區塊設定
-// 範例：
-.demosection {
-    [class^="col"] {
-        border: 2px solid #FFF;
-        background: #DEDEDE;
-    }
-}
-// 首頁輪播
-.mpSlider {
-    width: 100%;
-    padding-bottom: 3em;
-    @include gutter(0);
-    .img-container {
-        @include aspect-ratio(5, 2);
-    }
-}
-// 廣告輪播
-.adSlider {
-    @include gutter(70px);
-    margin-bottom: 20px;
+.info_block{
+  position: relative;
+  height: 518px;
+  overflow: hidden;
+  @include screen('mobile') {
+    height: auto;
+  }
+  .info{
+    position: absolute;
+    bottom: 280px;
+    left: 116px;
+    z-index: 10;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,.6);
+    font-weight: bold;
+    letter-spacing: 2px;
     @include screen('mobile') {
-        @include gutter();
+      bottom: auto;
+      left: 15%;
+      top: 40px;
+      width: 70%;
+      letter-spacing: 1px;
     }
-    .slick-prev {
-        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
-        background-size: 80%;
-        left: -15px;
+    .info_title{
+      font-size: 2.25em;
+      margin-bottom: 20px;
+      line-height: 1em;
+      @include screen('mobile') {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
     }
-    .slick-next {
-        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
-        background-size: 80%;
-        right: -15px;
+    .info_text{
+
     }
-    .img-container {
-        width: 165px;
-        height: 55px;
-        margin: 0px 15px;
-        a {
+  }
+  .quick_link{
+    position: absolute;
+    bottom: 0;
+    left: 88px;
+    z-index: 10;
+    background: rgba(51,51,51,.9);
+    display: block;
+    width: 510px;
+    height: 265px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-weight: bold;
+    @include screen('mobile') {
+      bottom: auto;
+      left: auto;
+      top:auto;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .quick_link_title{
+      background: $primaryColor;
+      background: linear-gradient(90deg, $primaryColor 0%, $secondaryColor 100%);
+      font-size: 1.25em;
+      color: #e0ebea;
+      padding: 20px 32px;
+      position: relative;
+      @include screen('mobile') {
+        padding: 15px 30px;
+        font-size: 1.125em;
+      }
+      &:before{
+        content: "";
+        width: 40px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        position: absolute;
+        opacity: .4;
+        bottom: 0;
+        left: 32px;
+      }
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 2em;
+      font-size: 1.0625em;
+      overflow: hidden;
+      @include screen('mobile') {
+        padding: 20px 30px;
+        font-size: 1em;
+      }
+      li{
+        float: left;
+        width: 50%;
+        padding: 4px 0;
+        position: relative;
+        @include screen('mobile') {
+          width: 100%;
+        }
+        &:before{
+          content: "";
+          width: 11px;
+          height: 11px;
+          display: block;
+          background: url(../images/basic/icon_cross.png) no-repeat center center;
+          position: absolute;
+          left: 0;
+          top: 15px;
+        }
+        a{
+          display: block;
+          color: #fff;
+          line-height: 2em;
+          padding-left: 22px;
+          &:hover,&:focus{
+            color: $lightColor;
+          }
+        }
+      }
+    }
+  }
+  .mpSlider{
+    position: relative;
+    z-index: 9;
+    .slick-slide img{
+      @include screen('mobile') {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.block_title{
+  text-align: center;
+  margin-bottom: 14px;
+}
+.news_block{
+  padding: 56px 90px 90px 90px;
+  background: url(../images/mpbg1.jpg) no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  @include screen('mobile') {
+    padding: 30px;
+  }
+  .news_list{
+    @include li-reset;
+    padding-right: 25px;
+    background: rgba(255,255,255,.5);
+    padding-bottom: 5px;
+    @include screen('mobile') {
+      background: none;
+      padding-right: 0;
+    }
+    @include clearfix;
+    .news_pic{
+      position: relative;
+      overflow: hidden;
+      width: 302px;
+      height: 194px;
+      display: block;
+      @include screen('mobile') {
+        width: 100%;
+        height: auto;
+      }
+      &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: .3;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        transition: all .5s;
+        @include screen('mobile') {
+          display: none;
+        }
+      }
+      img{
+        width: 302px;
+        height: 194px;
+        position: relative;
+        z-index: 9;
+        object-fit: cover;
+        @include screen('mobile') {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .news_date{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 11;
+      }
+    }
+    .news_date{
+      color: #fff;
+      background: $primaryColor;
+      padding: 2px 4px 0px 4px;
+      font-size: 0.875em;
+      font-family: "Myriad Pro";
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      @include screen('mobile') {
+        margin-top: 0;
+      }
+    }
+    .news_text{
+      text-align: justify;
+      display: block;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;  
+      text-overflow: ellipsis;
+      max-height: 46px;
+      a{
+        color: #222;
+      }
+    }
+    li{
+      border-bottom: 1px solid #fff;
+      padding-bottom: 10px;
+      &:first-child{
+        width: 302px;
+        float: left;
+        margin-right: 50px;
+        border-bottom: 0;
+        padding-bottom: 0;
+        @include screen('mobile') {
+          width: 100%;
+          float: none;
+          margin-right: 0;
+        }
+        a{
+          display: block;
+          box-shadow: 1px 0 5px rgba(0,0,0,0.2);
+          color: #222;
+          @include screen('mobile') {
+            box-shadow: 1px 0 5px rgba(0,0,0,0);
+          }
+          &:hover .news_pic:after{
+            opacity: 0;
+          }
+          .news_date{
+            margin-bottom: 0;
+            @include screen('mobile') {
+              top:0;
+              bottom: auto;
+            }
+          }
+          .news_text{
+            padding: 1em 1.375em;
+            -webkit-line-clamp: 4;
+            max-height: 124px;
+            height: 124px;
+            @include screen('mobile') {
+              padding: 1em 0;
+              height: auto;
+            }
+          }
+        }
+      }
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+  .more{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    @include screen('mobile') {
+      position: relative;
+    }
+    a{
+      color: #fff;
+      background: #333;
+      padding: 20px 32px;
+      display: block;
+      transition: all .5s;
+      @include screen('mobile') {
+        padding: 10px;
+        margin-top: 20px;
+      }
+      &:after{
+        content: "";
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+        margin-left: 20px;
+        background: url(../images/basic/icon_more.png) no-repeat 0 0;
+        vertical-align: middle;
+      }
+      &:hover{
+        background: $primaryColor;
+        color: #fff;
+      }
+    }
+  }
+}
+.mp_block{
+  position: relative;
+  .block_title{
+    position: absolute;
+    @include screen('mobile') {
+      position: relative;
+      width: 100%;
+    }
+    img{
+      width: 324px;
+      height: 310px;
+      @include screen('mobile') {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+  &.understaning{
+    padding: 160px 66px 130px 380px;
+    background: url(../images/mpbg2.jpg) no-repeat 0 0;
+    background-size: cover;
+    @include screen('mobile') {
+      padding: 30px
+    }  
+    .block_title{
+      left: 36px;
+      top: 160px;
+      @include screen('mobile') { 
+        left: auto;
+        top: auto;
+      }
+    }
+  }
+  &.application{
+    padding: 160px 66px 130px 380px;
+    background: url(../images/mpbg3.jpg) no-repeat 0 0;
+    @include screen('mobile') {
+      padding: 30px
+    }  
+    .block_title{
+      left: 40px;
+      top: 170px;
+      @include screen('mobile') { 
+        left: auto;
+        top: auto;
+      }
+    }
+  }
+  &.authorization{
+    padding: 160px 66px 130px 380px;
+    background: url(../images/mpbg4.jpg) no-repeat 0 0;
+    background-size: cover;
+    @include screen('mobile') {
+      padding: 30px
+    } 
+    .block_title{
+      left: 24px;
+      top: 160px;
+      @include screen('mobile') { 
+        left: auto;
+        top: auto;
+      }
+    }
+  }
+  .topic{
+    clear: both;
+    display: block;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 1px 0 5px rgba(0,0,0,0.2);
+    height: 175px;
+    @include screen('mobile') { 
+      width: 100%;
+      height: auto;
+    }
+    @include clearfix;
+    a{
+      color: #222;
+      &:hover{
+        color: $primaryColor;
+      }
+    }
+    .topic_pic{
+      float: left;
+      @include screen('mobile') { 
+        float: none;
+      }
+      img{
+        width: 354px;
+        height: 175px;
+        @include screen('mobile') { 
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .topic_text{
+      padding: 26px;
+      text-align: justify;
+      display: inline-block;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;  
+      text-overflow: ellipsis;
+      max-height: 140px;
+      height: 140px;
+      
+    }
+  }
+  .slick-next {
+    right: 0;
+    background: url(../images/arrow_right.png) center center no-repeat RGBA(255, 255, 255, 0);
+    background-size: 22px 34px;
+    &:hover,&:focus{
+      background: url(../images/arrow_right.png) center center no-repeat RGBA(255, 255, 255, .7);
+    }
+  }
+  .slick-prev {
+    left: 0;
+    background: url(../images/arrow_left.png) center center no-repeat RGBA(255, 255, 255, 0);
+    background-size: 22px 34px;
+    &:hover,&:focus{
+      background: url(../images/arrow_left.png) center center no-repeat RGBA(255, 255, 255, .7);
+    }
+  }
+  ul.link{
+    @include li-reset;
+    overflow: hidden;
+    display: block;
+    clear: both;
+    padding: 0 46px;
+    @include screen('mobile') { 
+      padding: 0 40px;
+      overflow: inherit;
+    }
+    li{
+      float: left;
+      font-weight: bold;
+      padding: 0 6px;
+      a{
+        width: 106px;
+        height: 106px;
+        display: block;
+        border-radius: 50%;
+        color: #fff;
+        background: $primaryColor;
+        background: linear-gradient(155deg, $primaryColor 20%, $primaryColor 100%);
+        text-align: center;
+        padding-top: 30px;
+        margin: 0 auto;
+        transition: all .5s;
+        span{
+          line-height: 45px;
+          height: 45px;
+          width: 100%;
+          display: block;
+          vertical-align: middle;
+        }
+        &:hover{
+          background: $primaryColor;
+          background: linear-gradient(155deg, $primaryColor 20%, $secondaryColor 100%);
+        }
+      }
+    }
+  }
+}
+.mp{
+  .bottom_block{
+    background:#fff url(../images/mpbg5.jpg) no-repeat 0 188px;
+    .service{
+      padding-top: 46px;
+      display: block;
+      clear: both;
+      margin-bottom: 85px;
+      @include screen('mobile') { 
+        padding-top: 30px;
+        margin-bottom: 20px;
+      }
+      ul{
+        @include li-reset;
+        display: table;
+        margin: 0 auto;
+        li{
+          float: left;
+          padding: 0 36px;
+          @include screen('mobile') { 
+            margin: 10px auto;
+            float: none;
+            padding: 0;
+          }
+          &:first-child{
+            a{
+              background: url(../images/service1.jpg) no-repeat 0 0;
+              &:after{
+                background: url(../images/service_icon1.png) no-repeat 0 0;
+              }
+            }
+          }
+          &:nth-child(2){
+            a{
+              background: url(../images/service2.jpg) no-repeat 0 0;
+              &:after{
+                background: url(../images/service_icon2.png) no-repeat 0 0;
+              }
+            }
+          }
+          &:nth-child(3){
+            a{
+              background: url(../images/service3.jpg) no-repeat 0 0;
+              &:after{
+                background: url(../images/service_icon3.png) no-repeat 0 0;
+              }
+            }
+          }
+          a{
+            width: 228px;
+            height: 228px;
             display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
             text-align: center;
-            img {
-                margin: 0 auto;
+            &:before{
+              content: "";
+              width: 100%;
+              height: 100%;
+              background: #000;
+              opacity: .3;
+              display: block;
+              position: absolute;
+              z-index: 10;
+              top: 0;
+              left: 0;
+              transition: all .5s;
             }
-        }
-        &:focus {
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: 9;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            &:after{
+              content: "";
+              width: 50px;
+              height: 50px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              margin-left: -25px;
+              top: 80px;
+              z-index: 11;
             }
+            span{
+              background: #000;
+              border-radius: 3px;
+              color: #fff;
+              display: inline-block;
+              margin: 135px auto 0 auto;
+              position: relative;
+              z-index: 11;
+              padding: 4px 16px;
+              font-weight: bold;
+              letter-spacing: 1px;
+              transition: all .5s;
+            }
+            &:hover{
+              &:before{
+                opacity: .1;
+              }
+              span{
+                background: $primaryColor;
+              }
+            }
+          }
         }
+      }
     }
+    .resource{
+      background: url(../images/mpbg6.jpg) no-repeat 0 150px;
+      background-size: cover;
+      overflow: hidden;
+      padding: 0 60px 35px 60px;
+      display: block;
+      clear: both;
+      .theme,.site,.video{
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+        padding: 50px 0 65px 0;
+        min-height: 355px;
+        position: relative;
+        @include screen('mobile') { 
+          min-height: auto;
+        }
+        .title{
+          color: #fff;
+          font-weight: bold;
+          font-size: 1.25em;
+          position: relative;
+          letter-spacing: 1px;
+          padding-bottom: 16px;
+          margin-bottom: 36px;
+          &:after{
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: #fff;
+            display: block;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+          }
+        }
+        ul{
+          @include li-reset;
+          margin-bottom: 25px;
+          li{
+            margin-bottom: 4px;
+            padding-left: 14px;
+            position: relative;
+            &:before{
+              content: "";
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 10px;
+              background: #fff;
+            }
+            a{
+              color: #fff;
+            }
+          }
+        }
+        .more{
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          overflow: hidden;
+          a{
+            color: $primaryColor;
+            background: #fff;
+            padding: 12px 32px;
+            display: block;
+            font-weight: bold;
+            min-width: 182px;
+            &:after{
+              content: "";
+              height: 14px;
+              width: 14px;
+              display: inline-block;
+              margin-left: 20px;
+              background: url(../images/basic/icon_more_.png) no-repeat 0 0;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .theme{
+
+      }
+      .site{
+
+      }
+      .video{
+        padding-left: 30px;
+        @include screen('mobile') { 
+          padding-left: 0;
+        }
+        ul li{
+          padding-left: 0;
+          margin-bottom: 0;
+          &:before{
+            display: none;
+          }
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        .slick-prev {
+          left: -40px;
+          background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+          background-size: 30px 30px;
+        }
+        .slick-next {
+          right: -40px;
+          background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+          background-size: 30px 30px;
+        }
+        .slick-dots{
+          bottom: -25px;
+          li button:before {
+            background: #fff;
+          }
+          li.slick-active button:before {
+            background: #fff!important;
+          }
+        }
+        .more{
+          left: 30px;
+          @include screen('mobile') { 
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
 }

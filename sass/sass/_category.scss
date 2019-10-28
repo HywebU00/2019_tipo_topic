@@ -21,13 +21,16 @@
         &:hover,
         &:focus {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
-            border: 1px solid darken($primaryColor, 15);
+            // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background: linear-gradient(-180deg, $primaryColor 20%, $secondaryColor 100%);
+            // border: 1px solid darken($primaryColor, 15);
+            border: 1px solid $primaryColor;
             box-shadow: none;
         }
         &.active {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background: linear-gradient(-180deg, $primaryColor 20%, $secondaryColor 100%);
+            // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
         }
         span {
             font-size: .813em;
