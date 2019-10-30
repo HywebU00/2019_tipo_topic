@@ -716,3 +716,45 @@
   }
 
 }
+.fixed_sidebar {
+  background: RGBA(0, 0, 0, .8);
+  width: 60px;
+  min-height: 200px;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 13%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: .5em;
+  @include border-radius(3px 0 0 3px);
+  ul {
+    @include li-reset;
+    li {
+      width: 60px;
+      height: 50px;
+      a {
+        display: block;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        font-weight: bold;
+        &:hover,
+        &:focus {
+          &:before {
+            display: block;
+            right: 0;
+          }
+        }
+      }
+      img {
+        width: 36px;
+        height: 36px;
+        margin: 10px auto 4px;
+      }
+    }
+  }
+  @include screen('mobile') {
+    display: none;
+  }
+}
