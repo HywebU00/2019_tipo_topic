@@ -153,7 +153,7 @@
     </header>
     <!-- header End -->
     <!-- main Start -->
-    <div id="center" class="main innerpage">
+    <div id="center" class="main innerpage">      
       <div class="container">
         <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
         <!-- breadcrumb路徑 -->
@@ -164,12 +164,10 @@
             <li>節點</li>
           </ul>
         </div>
-        <h2 class="title">要套文章標題</h2>
+        <!-- h2節點 -->
+        <h2 class="title">節點標題</h2>
         <!-- function_panel -->
         <div class="function_panel">
-          <div class="publish_time">
-            <span>發布日期：</span><time>2019-01-01</time>
-          </div>
           <!-- 文字大小 -->
           <div class="font_size">
             <span>字型大小：</span>
@@ -202,128 +200,175 @@
             </ul>
           </div>
         </div>
-        <!-- tag 文章標籤 -->
-        <div class="tag">
-          <ul>
-            <li><a href="#">文章標籤1</a></li>
-            <li><a href="#">文章標籤2</a></li>
-            <li><a href="#">文章標籤3</a></li>
-            <li><a href="#">文章標籤4</a></li>
-            <li><a href="#">文章標籤5</a></li>
-          </ul>
-        </div>
-        <!-- CP Start -->
-        <section class="cp">
-          <ul class="publish_info">
-            <li>發布日期:2018-03-20</li>
-            <li>發布單位:移民事務組‧移民輔導科</li>
-            <li>聯絡電話:(02)2388-9393 分機2689</li>
-            <li>更新頻率:不定期</li>
-            <li>更新日期:2018-03-20</li>
-            <li>點閱次數:123456</li>
-          </ul>
-          <!-- yncSlider -->
-          <div class="Syncing_slider">
-            <h3>相片集錦</h3>
-            <!--大圖slider-for-->
-            <div class="Slider-for">
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=500&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+        <!-- LP Start -->
+        <section class="lp">
+          <!-- 進階搜尋 -->
+          <div class="advanced_search_block">
+            <div class="function_btn">
+              <button type="button" class="btn btn-sm  btn_advanced_search">顯示條件查詢</button>
+            </div> 
+            <div class="advanced_search" style="">
+              <form action="" class="form_grid">
+                <div class="form_grp">
+                  <label for="sameId" class="form_title">標題：</label>
+                  <div class="form_content">
+                    <input type="text" id="sameId" value="">
+                  </div>
                 </div>
-                <p>第一張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/puffins.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                <div class="form_grp">
+                  <label for="address" class="form_title">內文：</label>
+                  <div class="form_content">
+                    <textarea name="" id="address" cols="30" rows="10"></textarea>
+                  </div>
                 </div>
-                <p>第二張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                <div class="form_grp">
+                  <label for="" class="form_title">張貼日：</label>
+                  <div class="form_content form_inline">
+                    <input name="" type="text" value="" id="calendarStart" placeholder="開始日期"><a href="" class="btn_calendar"></a> ~
+                    <input name="" type="text" value="" id="calendarEnd" placeholder="結束日期"><a href="" class="btn_calendar"></a>
+                  </div>
                 </div>
-                <p>第三張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
+                <div class="btn_grp">
+                  <input name="Search" type="submit" value="查詢">
+                  <input name="" type="reset" value="重設">
                 </div>
-                <p>第四張圖說</p>
-              </div>
+              </form>
             </div>
-            <!-- slider-for end-->
-            <div class="controls"></div>
-            <!--小圖slider-nav-->
-            <div class="Slider-nav">
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/kingfisher.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
-                </div>
-                <p>第一張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/puffins.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
-                </div>
-                <p>第二張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/examples/womanlandscape.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
-                </div>
-                <p>第三張圖說</p>
-              </div>
-              <div>
-                <div class="img-container">
-                  <img src="https://assets.imgix.net/unsplash/paperlamp.jpg?w=800&h=480&fit=crop&auto=format%2Cenhance&usm=20">
-                </div>
-                <p>第四張圖說</p>
-              </div>
-            </div>
-            <!-- slider-nav end-->
           </div>
-          <!-- weblink 外部連結 -->
-          <div class="web_link">
-            <h3>外部連結</h3>
-            <ol>
-              <li><a href="javscript:;">外部連結1</a></li>
-              <li><a href="javscript:;">外部連結2</a></li>
-              <li><a href="javscript:;">外部連結3</a></li>
-              <li><a href="javscript:;">外部連結4</a></li>
-              <li><a href="javscript:;">外部連結5</a></li>
-            </ol>
-          </div>
-          <!-- file download 檔案下載 -->
-          <div class="file_download">
-            <h3>檔案下載</h3>
+          <!-- category -->
+          <div class="category">
             <ul>
-              <li> <span>檔案名稱</span>
-                <a href="xxxx.doc">檔案名稱.doc</a>
-                <a href="xxxx.docx">檔案名稱.docx</a>
-                <a href="xxxx.odt">檔案名稱.odt</a>
+              <li><a href="#">標籤1</a></li>
+              <li><a href="#">標籤2</a></li>
+              <li><a href="#">標籤3</a></li>
+              <li><a href="#">標籤4</a></li>
+              <li><a href="#">標籤5</a></li>
+              <li><a href="#">標籤6</a></li>
+              <li><a href="#">標籤7</a></li>
+              <li><a href="#">標籤8</a></li>
+              <li><a href="#">標籤9</a></li>
+              <li><a href="#">標籤10</a></li>
+            </ul>
+          </div>
+          <p>時學意料壓事因。還大書氣如可義美望產此然業體線歡在的走一，專用邊香……裡一中人的先會關空大間著我，日來想男一。風時天，族作歌著洲己院否向著一拿手大都的。德車愛其書我老自我。</p>
+          <!-- 文字列表 -->
+          <div class="list list-title">
+            <ul>
+              <li>
+                <a href="#">
+                  <span class="num">1</span>
+                  <span class="title">新加坡</span> 
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
               </li>
-              <li><span>檔案名稱</span>
-                <a href="xxxx.xls">檔案名稱.xls</a>
-                <a href="xxxx.xlsx">檔案名稱.xlsx</a>
-                <a href="xxxx.csv">檔案名稱.csv</a>
-                <a href="xxxx.ods">檔案名稱.ods</a>
+              <li>
+                <a href="#">
+                  <span class="num">2</span>
+                  <span class="title">印尼</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
               </li>
-              <li><span>檔案名稱</span>
-                <a href="xxxx.ppt">檔案名稱.ppt</a>
-                <a href="xxxx.pptx">檔案名稱.pptx</a>
-                <a href="xxxx.odp">檔案名稱.odp</a>
-                <a href="xxxx.pdf">檔案名稱.odp</a>
+              <li>
+                <a href="#">
+                  <span class="num">3</span>
+                  <span class="title">馬來西亞</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
               </li>
-              <li><span>檔案名稱</span>
-                <a href="xxxx.zip">檔案名稱.zip</a>
-                <a href="xxxx.txt">檔案名稱.txt</a>
-                <a href="xxxx.mov">檔案名稱.mov</a>
-                <a href="xxxx.mp3">檔案名稱.mp3</a>
-                <a href="xxxx.jpg">檔案名稱.jpg</a>
-                <a href="xxxx.wmv">檔案名稱.wmv</a>
-                <a href="xxxx.mp4">檔案名稱.mp4</a>
-                <a href="xxxx.xxxxx">檔案名稱.mp4</a>
+              <li>
+                <a href="#">
+                  <span class="num">4</span>
+                  <span class="title">緬甸</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">5</span>
+                  <span class="title">越南</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">6</span>
+                  <span class="title">柬埔寨</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">7</span>
+                  <span class="title">菲律賓</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">1</span>
+                  <span class="title">寮國</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">9</span>
+                  <span class="title">泰國</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="num">10</span>
+                  <span class="title">汶萊</span>
+                  <span class="dept">資料服務組</span>
+                  <time>108-04-29</time>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- LP End -->
+        <!-- Pagination -->
+        <div class="pagination">
+          <form action="" class="form_inline">
+            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+              <option value="">10</option>
+              <option value="">20</option>
+              <option value="">30</option>
+              <option value="">40</option>
+            </select> 筆， <input type="button" class="btn" value="確定">
+          </div>
+        </form>
+        <ul class="page">
+          <li class="first">
+            <a href="#" title="第一頁">第一頁 </a></li>
+            <li class="prev">
+              <a href="#" title="回上一頁">回上一頁 </a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li class="next">
+                <a href="#" title="下一頁">下一頁 </a>
+              </li>
+              <li class="last">
+                <a href="#" title="最後一頁">最後一頁 </a>
               </li>
             </ul>
           </div>
@@ -446,3 +491,5 @@
       <!-- 客製js -->
       <script src="js/customize.js"></script>
     </body>
+
+    </html>

@@ -127,3 +127,9 @@ $(function() {
         infinite: true
     });
  });
+$(function(){
+    $('.advanced_search_block .advanced_search').hide();
+    $('.btn_advanced_search').off().click(function(event) {
+        $('.advanced_search_block .advanced_search').stop().slideToggle();
+    });
+});
