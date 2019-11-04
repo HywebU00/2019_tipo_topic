@@ -366,6 +366,7 @@
       font-weight: bold;
     }
     .form_grid{
+      border-top: 0;
       @include screen('mobile') {
         margin: 0;
       }

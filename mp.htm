@@ -155,10 +155,19 @@
     <!-- header End -->
     <!-- main Start -->
     <div id="center" class="main">
-      <div class="container">
-        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-        <section class="info_block">
-          <div class="mpSlider">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 主圖 -->
+      <section class="info_block">
+        <div class="mpSlider">
+          <div class="slider">
+            <a href="#" title="">
+              <picture>
+                <source media="(min-width: 1200px)" data-lazy-srcset="images/mpslider.jpg"><source media="(min-width: 992px)" data-lazy-srcset="images/mpslider.jpg"><source media="(min-width: 576px)" data-lazy-srcset="images/mpslider.jpg"><source media="(max-width: 575px)" data-lazy-srcset="images/mpslider.jpg">
+                  <img data-lazy="images/mpslider.jpg" class="cover">
+                  <noscript><img src="images/mpslider.jpg"></noscript>
+                </picture>
+              </a>
+            </div>
             <div class="slider">
               <a href="#" title="">
                 <picture>
@@ -168,16 +177,9 @@
                   </picture>
                 </a>
               </div>
-              <div class="slider">
-                <a href="#" title="">
-                  <picture>
-                    <source media="(min-width: 1200px)" data-lazy-srcset="images/mpslider.jpg"><source media="(min-width: 992px)" data-lazy-srcset="images/mpslider.jpg"><source media="(min-width: 576px)" data-lazy-srcset="images/mpslider.jpg"><source media="(max-width: 575px)" data-lazy-srcset="images/mpslider.jpg">
-                      <img data-lazy="images/mpslider.jpg" class="cover">
-                      <noscript><img src="images/mpslider.jpg"></noscript>
-                    </picture>
-                  </a>
-                </div>
-              </div>
+            </div>
+            <div class="container">
+
               <div class="info">
                 <div class="info_title">著作權主題網</div>
                 <div class="info_text">提供著作權介紹、著作權相關案件申請、授權資訊<br>瀏覽著作權最新消息及宣導，<br>強化民眾著作權基本觀念與知識</div>
@@ -193,8 +195,11 @@
                   <li><a href="">常見問答FAQ</a></li>
                 </ul>
               </div>
-            </section>
-            <section class="news_block">
+            </div>
+          </section>
+          <!-- 最新消息 -->
+          <section class="news_block">
+            <div class="container">
               <div class="block_title"><img src="images/title_news.png" alt="最新消息"></div>
               <ul class="news_list">
                 <li>
@@ -229,8 +234,11 @@
                       <div class="more">
                         <a href="">更多最新消息</a>
                       </div>
-                    </section>
-                    <section class="mp_block understaning">
+                    </div>
+                  </section>
+                  <!-- 認識著作權 -->
+                  <section class="mp_block understaning">
+                    <div class="container">
                       <div class="block_title wow rollIn"><img src="images/title_understaning.png" alt="認識著作權"></div>
                       <div class="topic">
                         <a href="">
@@ -253,14 +261,17 @@
                                 <li><a href="">解釋資料<br>檢索</a></li>
                                 <li><a href=""><span>著作權知識+</span></a></li>
                                 <li><a href=""><span>網路著作權</span></a></li>
-                                <li><a href=""><span>懶人包</a></span></li>
+                                <li><a href=""><span>懶人包</span></a></li>
                                 <li><a href="">解釋資料<br>檢索</a></li>
                                 <li><a href=""><span>著作權知識+</span></a></li>
                                 <li><a href=""><span>網路著作權</span></a></li>
-                                <li><a href=""><span>懶人包</a></span></li>
+                                <li><a href=""><span>懶人包</span></a></li>
                               </ul>
-                            </section>
-                            <section class="mp_block application">
+                            </div>
+                          </section>
+                          <!-- 案件申請 -->
+                          <section class="mp_block application">
+                            <div class="container">
                               <div class="block_title wow rollIn"><img src="images/title_application.png" alt="案件申請"></div>
                               <div class="topic">
                                 <a href="">
@@ -285,8 +296,10 @@
                                         <li><a href="">不明著作<br>利用</a></li>
                                         <li><a href="">申請質權<br>登記</a></li>
                                       </ul>
-                                    </section>
-                                    <section class="mp_block authorization">
+                                    </div>
+                                  </section>
+                                  <section class="mp_block authorization">
+                                    <div class="container">
                                       <div class="block_title wow rollIn"><img src="images/title_authorization.png" alt="使用授權"></div>
                                       <div class="topic">
                                         <a href="">
@@ -315,9 +328,11 @@
                                                 <li><a href=""><span>授權費率</span></a></li>
                                                 <li><a href=""><span>契約範本</span></a></li>
                                               </ul>
-                                            </section>
-                                            <section class="bottom_block">
-                                              <div class="service">
+                                            </div>
+                                          </section>
+                                          <section class="bottom_block">  
+                                            <div class="service">
+                                              <div class="container">
                                                 <div class="block_title"><img src="images/title_service.png" alt="更多服務"></div>
                                                 <ul class="link">
                                                   <li class="wow flipInX"><a href=""><span>法規資訊</span></a></li>
@@ -325,7 +340,9 @@
                                                   <li class="wow flipInX" data-wow-delay="1s"><a href=""><span>統計資料</span></a></li>
                                                 </ul>
                                               </div>
-                                              <div class="resource">
+                                            </div>
+                                            <div class="resource">
+                                              <div class="container">
                                                 <div class="block_title"><img src="images/title_resource.png" alt="相關資源"></div>
                                                 <div class="theme">
                                                   <div class="title">主題專區</div>
@@ -366,37 +383,37 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                            </section>
-                                            <section class="fixed_sidebar">
-                                              <ul>
-                                                <li>
-                                                  <a href="#">
-                                                    <img src="images/basic/icon_mail.png" alt="">
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <img src="images/basic/icon_facebook.png" alt="">
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <img src="images/basic/icon_rss.png" alt="">
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <img src="images/basic/icon_youtube.png" alt="">
-                                                  </a>
-                                                </li>
-                                                <li>
-                                                  <a href="#">
-                                                    <img src="images/basic/icon_flickr.png" alt="">
-                                                  </a>
-                                                </li>
-                                              </ul>
-                                            </section>
-                                          </div>
+                                            </div>
+                                          </section>
+                                          <section class="fixed_sidebar">
+                                            <ul>
+                                              <li>
+                                                <a href="#">
+                                                  <img src="images/basic/icon_mail.png" alt="">
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <img src="images/basic/icon_facebook.png" alt="">
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <img src="images/basic/icon_rss.png" alt="">
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <img src="images/basic/icon_youtube.png" alt="">
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <img src="images/basic/icon_flickr.png" alt="">
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </section>
 
                                         </div>
                                         <!-- fatfooter Start -->
@@ -468,10 +485,10 @@
                                         <footer>
                                           <div class="container">
                                             <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                                            <div class="footer_logo">
+                                              <img src="images/logo_b.png" alt="" class="img-responsive">
+                                            </div>
                                             <div class="footer_info">
-                                              <div class="footer_logo">
-                                                <img src="images/logo_b.png" alt="" class="img-responsive">
-                                              </div>
                                               <ul class="footer_link">
                                                 <li><a href="javascript:;">政府網站資料開放宣告</a></li>
                                                 <li><a href="javascript:;">隱私權宣告</a></li>

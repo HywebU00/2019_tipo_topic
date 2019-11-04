@@ -121,6 +121,7 @@
     position: relative;
     z-index: 9;
     .slick-slide img{
+      object-fit:cover;
       @include screen('mobile') {
         width: 100%;
         height: auto;
@@ -133,13 +134,21 @@
   text-align: center;
   margin-bottom: 14px;
 }
+.news_block,.mp_block,.bottom_block{
+  .container{
+    position: relative;
+  }
+}
 .news_block{
-  padding: 56px 90px 90px 90px;
-  background: url(../images/mpbg1.jpg) no-repeat 0 0;
+  // padding: 56px 90px 90px 90px;
+  background: url(../images/mpbg1.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
   @include screen('mobile') {
     padding: 30px;
+  }
+  .container{
+    padding: 56px 60px 90px 40px;
   }
   .news_list{
     @include li-reset;
@@ -150,7 +159,7 @@
       background: none;
       padding-right: 0;
     }
-    @include clearfix;
+    // @include clearfix;
     .news_pic{
       position: relative;
       overflow: hidden;
@@ -220,6 +229,10 @@
       max-height: 46px;
       a{
         color: #222;
+        display: block;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
     li{
@@ -242,6 +255,9 @@
           color: #222;
           @include screen('mobile') {
             box-shadow: 1px 0 5px rgba(0,0,0,0);
+          }
+          &:hover{
+            text-decoration: underline;
           }
           &:hover .news_pic:after{
             opacity: 0;
@@ -300,7 +316,7 @@
         background: url(../images/basic/icon_more.png) no-repeat 0 0;
         vertical-align: middle;
       }
-      &:hover{
+      &:hover,&:focus{
         background: $primaryColor;
         color: #fff;
       }
@@ -325,12 +341,14 @@
     }
   }
   &.understaning{
-    padding: 160px 66px 130px 380px;
-    background: url(../images/mpbg2.jpg) no-repeat 0 0;
+    background: url(../images/mpbg2.jpg) no-repeat center center;
     background-size: cover;
-    @include screen('mobile') {
-      padding: 30px
-    }  
+    .container{
+      padding: 160px 66px 130px 380px;
+      @include screen('mobile') {
+        padding: 30px
+      }  
+    }
     .block_title{
       left: 36px;
       top: 160px;
@@ -341,11 +359,14 @@
     }
   }
   &.application{
-    padding: 160px 66px 130px 380px;
-    background: url(../images/mpbg3.jpg) no-repeat 0 0;
-    @include screen('mobile') {
-      padding: 30px
-    }  
+    background: url(../images/mpbg3.jpg) no-repeat center center;
+    background-size: cover;
+    .container{
+      padding: 160px 66px 130px 380px;
+      @include screen('mobile') {
+        padding: 30px
+      }  
+    }
     .block_title{
       left: 40px;
       top: 170px;
@@ -356,12 +377,14 @@
     }
   }
   &.authorization{
-    padding: 160px 66px 130px 380px;
-    background: url(../images/mpbg4.jpg) no-repeat 0 0;
+    background: url(../images/mpbg4.jpg) no-repeat center center;
     background-size: cover;
-    @include screen('mobile') {
-      padding: 30px
-    } 
+    .container{
+      padding: 160px 66px 130px 380px;
+      @include screen('mobile') {
+        padding: 30px
+      } 
+    }
     .block_title{
       left: 24px;
       top: 160px;
@@ -385,8 +408,9 @@
     @include clearfix;
     a{
       color: #222;
-      &:hover{
+      &:hover,&:focus{
         color: $primaryColor;
+        box-shadow: 0 0 0 0 transparent inset;
       }
     }
     .topic_pic{
@@ -404,9 +428,9 @@
       }
     }
     .topic_text{
-      padding: 26px;
+      padding: 24px;
       text-align: justify;
-      display: inline-block;
+      display: block;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 5;
@@ -439,6 +463,7 @@
     display: block;
     clear: both;
     padding: 0 46px;
+    font-size: 1.125em;
     @include screen('mobile') { 
       padding: 0 40px;
       overflow: inherit;
@@ -448,15 +473,15 @@
       font-weight: bold;
       padding: 0 6px;
       a{
-        width: 106px;
-        height: 106px;
+        width: 120px;
+        height: 120px;
         display: block;
         border-radius: 50%;
         color: #fff;
         background: $primaryColor;
         background: linear-gradient(155deg, $primaryColor 20%, $primaryColor 100%);
         text-align: center;
-        padding-top: 30px;
+        padding-top: 38px;
         margin: 0 auto;
         transition: all .5s;
         span{
@@ -466,9 +491,10 @@
           display: block;
           vertical-align: middle;
         }
-        &:hover{
+        &:hover,&:focus{
           background: $primaryColor;
           background: linear-gradient(155deg, $primaryColor 20%, $secondaryColor 100%);
+          box-shadow: 0 0 0 0 transparent inset;
         }
       }
     }
@@ -476,16 +502,20 @@
 }
 .mp{
   .bottom_block{
-    background:#fff url(../images/mpbg5.jpg) no-repeat 0 188px;
     .service{
-      padding-top: 46px;
-      display: block;
-      clear: both;
-      margin-bottom: 85px;
-      @include screen('mobile') { 
-        padding-top: 30px;
-        margin-bottom: 20px;
+      background: url(../images/mpbg5.jpg) no-repeat 0 bottom;
+      background-size: cover;
+      .container{
+        padding-top: 46px;
+        display: block;
+        clear: both;
+        padding-bottom: 235px;
+        @include screen('mobile') { 
+          padding-top: 30px;
+          margin-bottom: 20px;
+        }
       }
+      
       ul{
         @include li-reset;
         display: table;
@@ -567,7 +597,7 @@
               letter-spacing: 1px;
               transition: all .5s;
             }
-            &:hover{
+            &:hover,&:focus{
               &:before{
                 opacity: .1;
               }
@@ -580,19 +610,23 @@
       }
     }
     .resource{
-      background: url(../images/mpbg6.jpg) no-repeat 0 150px;
+      background: url(../images/mpbg6.jpg) no-repeat center center;
       background-size: cover;
-      overflow: hidden;
-      padding: 0 60px 35px 60px;
-      display: block;
-      clear: both;
+      .container{
+        padding: 0 60px 35px 60px;
+        display: block;
+        clear: both;
+      }
+      .block_title{
+        margin-top: -150px;
+      }
       .theme,.site,.video{
         @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-md-column(4);
         @include make-lg-column(4);
         padding: 50px 0 65px 0;
-        min-height: 355px;
+        min-height: 390px;
         position: relative;
         @include screen('mobile') { 
           min-height: auto;
@@ -636,6 +670,9 @@
             }
             a{
               color: #fff;
+              &:hover,&:focus{
+                text-decoration: underline;
+              }
             }
           }
         }
@@ -660,6 +697,13 @@
               margin-left: 20px;
               background: url(../images/basic/icon_more_.png) no-repeat 0 0;
               vertical-align: middle;
+            }
+            &:hover,&:focus{
+              background: #333;
+              color: #fff;
+              &:after{
+                background: url(../images/basic/icon_more.png) no-repeat 0 0;
+              }
             }
           }
         }

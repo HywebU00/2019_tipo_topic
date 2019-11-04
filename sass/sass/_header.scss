@@ -2,6 +2,8 @@
 .header {
   position: relative;
   z-index: 99;
+  background: rgb(9,145,140);
+  background: linear-gradient(90deg, rgba(9,145,140,1) 20%, rgba(23,178,116,1) 100%);
   @extend %clearfix;
   @include screen('mobile') {
     position: fixed;
@@ -23,7 +25,6 @@
     max-width: $container-max;
     overflow: visible;
     position: relative;
-    background: $primaryColor;
     .sidebarCtrl,.searchCtrl{
       width: 32px;
       height: 32px;
@@ -137,7 +138,7 @@
         text-decoration: none;
         color: #fff;
         &:hover,&:focus{
-          text-decoration: underline;
+          background: $linkColor;
         }
       }
       @include screen('mobile') {
@@ -171,11 +172,12 @@
     margin-right: .3em;
     width: 70%;
     input {
-      margin: -0.2em 0 0;
-      padding: .2em 35px .2em .5em;
+      // margin: -0.2em 0 0;
+      margin: 0;
+      padding: .3em 35px .3em .5em;
       box-shadow: none;
       &[type="text"] {
-        margin-top: 4px;
+        // margin-top: 4px;
         &:focus {
           box-shadow: 0px 0px 0px 3px $aHover;
           outline: none;
@@ -205,7 +207,7 @@
     }
   }
   .btn_grp {
-    padding: .2em;
+    padding: 0;
     margin-bottom: 0;
     float: right;
     input, input[type="submit"] {

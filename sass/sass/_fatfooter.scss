@@ -3,6 +3,7 @@
   @extend %clearfix;
   overflow: hidden;
   margin: 0 auto;
+  background: $fatfooterBgColor;
   @include screen('mobile') {
     display: none;
   }
@@ -10,7 +11,7 @@
     overflow: hidden;
     @include box-sizing;
     @include gutter;
-    background: $fatfooterBgColor;
+    
     padding-bottom: 1em;
   }
     // 按鈕
