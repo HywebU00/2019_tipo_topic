@@ -120,11 +120,15 @@
   .mpSlider{
     position: relative;
     z-index: 9;
-    .slick-slide img{
-      object-fit:cover;
-      @include screen('mobile') {
-        width: 100%;
-        height: auto;
+    .slick-slide{
+      background: $primaryColor;
+      img{
+        object-fit:cover;
+        margin: 0 auto;
+        @include screen('mobile') {
+          width: 100%;
+          height: auto;
+        }
       }
     }
     .slick-next {
