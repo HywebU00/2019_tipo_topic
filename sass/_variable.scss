@@ -27,12 +27,14 @@ $aColor:					#008477;
 $aHover:					#026259;
 
 // 表單focus顏色
-$form-focus:				#008477;				 //表單
+$form-focus:				#008477;				 //表單 
 $form-btn:					#19b0cb;				//表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
-$font-family:               Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); 
+$font-family:				"Noto Sans TC", sans-serif;
+// $font-family:               Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
 $font-size:					1em;
 
 //-------------------------------------------------------------格線系統-----//
