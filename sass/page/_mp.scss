@@ -14,24 +14,36 @@
     text-shadow: 0 0 3px rgba(0,0,0,.6);
     font-weight: bold;
     letter-spacing: 2px;
+    @include screen('tablet') {
+      text-align: center;
+      width: 70%;
+    }
     @include screen('mobile') {
       bottom: auto;
-      left: 15%;
-      top: 40px;
-      width: 70%;
+      left: 0;
       letter-spacing: 1px;
+      top: 0;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      background: rgba(51,51,51,0.9);
     }
     .info_title{
       font-size: 2.25em;
       margin-bottom: 20px;
       line-height: 1em;
-      @include screen('mobile') {
+      @include screen('tablet') {
         font-size: 2em;
         margin-bottom: 10px;
       }
+      @include screen('mobile') {
+        font-size: 1.25em;
+      }
     }
     .info_text{
-
+      @include screen('mobile') {
+        font-size: 0.875em;
+      }
     }
   }
   .quick_link{
@@ -46,6 +58,10 @@
     box-sizing: border-box;
     letter-spacing: 1px;
     font-weight: bold;
+    @include screen('tablet') {
+      left: 50%;
+      margin-left: -255px;
+    }
     @include screen('mobile') {
       bottom: auto;
       left: auto;
@@ -53,6 +69,7 @@
       position: relative;
       width: 100%;
       height: auto;
+      margin-left: 0;
     }
     .quick_link_title{
       background: $primaryColor;
@@ -86,6 +103,8 @@
       @include screen('mobile') {
         padding: 20px 30px;
         font-size: 1em;
+        background: $primaryColor;
+        background: linear-gradient(90deg, $primaryColor 0%, $secondaryColor 100%);
       }
       li{
         float: left;
@@ -133,9 +152,17 @@
     }
     .slick-next {
       right: 70px;
+      @include screen('mobile') {
+        right: 10px;
+        top: 50px;
+      }
     }
     .slick-prev {
       left: 70px;
+      @include screen('mobile') {
+        left: 10px;
+        top: 50px;
+      }
     }
   }
 }
@@ -159,6 +186,9 @@
   }
   .container{
     padding: 56px 60px 90px 40px;
+    @include screen('mobile') {
+      padding: 0;
+    }
   }
   .news_list{
     @include li-reset;
@@ -337,16 +367,21 @@
   position: relative;
   .block_title{
     position: absolute;
-    @include screen('mobile') {
+    @include screen('tablet') {
       position: relative;
-      width: 100%;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
     img{
       width: 324px;
       height: 310px;
-      @include screen('mobile') {
+      @include screen('tablet') {
         width: 50%;
         height: auto;
+      }
+      @include screen('mobile') {
+        width: 90%;
       }
     }
   }
@@ -355,14 +390,14 @@
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
-      @include screen('mobile') {
+      @include screen('tablet') {
         padding: 30px
       }  
     }
     .block_title{
       left: 36px;
       top: 160px;
-      @include screen('mobile') { 
+      @include screen('tablet') { 
         left: auto;
         top: auto;
       }
@@ -373,14 +408,14 @@
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
-      @include screen('mobile') {
+      @include screen('tablet') {
         padding: 30px
       }  
     }
     .block_title{
       left: 40px;
       top: 170px;
-      @include screen('mobile') { 
+      @include screen('tablet') { 
         left: auto;
         top: auto;
       }
@@ -391,14 +426,14 @@
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
-      @include screen('mobile') {
+      @include screen('tablet') {
         padding: 30px
       } 
     }
     .block_title{
       left: 24px;
       top: 160px;
-      @include screen('mobile') { 
+      @include screen('tablet') { 
         left: auto;
         top: auto;
       }
@@ -515,6 +550,9 @@
     .service{
       background: url(../images/mpbg5.jpg) no-repeat 0 bottom;
       background-size: cover;
+      @include screen('mobile') {
+        background:none;
+      }
       .container{
         padding-top: 46px;
         display: block;
@@ -523,6 +561,7 @@
         @include screen('mobile') { 
           padding-top: 30px;
           margin-bottom: 20px;
+          padding-bottom: 200px;
         }
       }
       
@@ -533,6 +572,9 @@
         li{
           float: left;
           padding: 0 36px;
+          @include screen('tablet') {
+            padding: 0 15px;
+          }
           @include screen('mobile') { 
             margin: 10px auto;
             float: none;
@@ -570,6 +612,10 @@
             position: relative;
             overflow: hidden;
             text-align: center;
+            @include screen('tablet') {
+              width: 180px;
+              height: 180px;
+            }
             &:before{
               content: "";
               width: 100%;

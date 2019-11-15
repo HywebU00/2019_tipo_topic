@@ -23,6 +23,10 @@ footer {
     @include make-md-column(2);
     @include make-lg-column(2);
     @include gutter();
+    @include screen('mobile') { 
+      padding: 0;
+      margin-bottom: 10px;
+    }
   }
   .footer_info {
     @include make-xs-column(12);
