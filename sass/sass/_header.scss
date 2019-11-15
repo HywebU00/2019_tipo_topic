@@ -201,7 +201,7 @@
         &:focus {
           opacity: 1;
           box-shadow: none !important;
-          outline: 2px solid $aHover;
+          outline: 2px solid $aHover; 
         }
       }
     }
@@ -219,8 +219,8 @@
       color: #fff;
       text-shadow:0 0 0 transparent;
       &:focus {
-        background: lighten(#fff, 0);
-        border: 1px solid lighten(#fff, 0);
+        background: $secondaryColor;
+        border: 1px solid $secondaryColor;
       }
     }
   }
