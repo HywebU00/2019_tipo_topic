@@ -20,8 +20,9 @@
       display: block;
       width: 95px;
       height: 100px;
+      line-height: 100%;
       color: $aHover;
-      background: url(../images/fatfooter_icon.png) no-repeat 0 18px;
+      background: $fatfooter_icon no-repeat 0 22px;
       position: relative;
       z-index: 90;
       margin: 18px auto 22px auto;

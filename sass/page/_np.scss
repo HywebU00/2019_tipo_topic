@@ -28,16 +28,16 @@
   a {
     border-radius:4px;
     padding: 0 1em 0 2em;
-    min-height: 120px;
-    line-height: 120px;
+    min-height: 90px;
+    line-height: 90px;
     color: #fff;
     font-size: 1.125em;
     display: block;
     vertical-align: top;
     @include text-overflow;
     position:relative;
-    background:  url(../images/npbg.png) no-repeat right bottom,rgb(9,145,140);
-    background:  url(../images/npbg.png) no-repeat right bottom ,linear-gradient(90deg, rgba(9,145,140,1) 50%, rgba(23,178,116,1) 100%);
+    background: $npbg no-repeat right bottom,rgb(9,145,140);
+    background: $npbg no-repeat right bottom ,linear-gradient(90deg, rgba(9,145,140,1) 50%, rgba(23,178,116,1) 100%);
     .num{
       position: absolute;
       width:1em;

@@ -51,7 +51,7 @@
     bottom: 0;
     left: 88px;
     z-index: 10;
-    background: rgba(51,51,51,.9);
+    background: rgba(20,20,20,.8);
     display: block;
     width: 510px;
     height: 265px;
@@ -178,7 +178,7 @@
 }
 .news_block{
   // padding: 56px 90px 90px 90px;
-  background: url(../images/mpbg1.jpg) no-repeat center center;
+  background: $mpbg1 no-repeat center center;
   background-size: cover;
   position: relative;
   @include screen('mobile') {
@@ -353,7 +353,7 @@
         width: 14px;
         display: inline-block;
         margin-left: 20px;
-        background: url(../images/basic/icon_more.png) no-repeat 0 0;
+        background: $more no-repeat 0 0;
         vertical-align: middle;
       }
       &:hover,&:focus{
@@ -386,7 +386,7 @@
     }
   }
   &.understaning{
-    background: url(../images/mpbg2.jpg) no-repeat center center;
+    background: $mpbg2 no-repeat center center;
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
@@ -404,7 +404,7 @@
     }
   }
   &.application{
-    background: url(../images/mpbg3.jpg) no-repeat center center;
+    background: $mpbg3 no-repeat center center;
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
@@ -422,7 +422,7 @@
     }
   }
   &.authorization{
-    background: url(../images/mpbg4.jpg) no-repeat center center;
+    background: $mpbg4 no-repeat center center;
     background-size: cover;
     .container{
       padding: 160px 66px 130px 380px;
@@ -488,18 +488,18 @@
   }
   .slick-next {
     right: 0;
-    background: url(../images/arrow_right.png) center center no-repeat RGBA(255, 255, 255, 0);
+    background: $arrow_right center center no-repeat RGBA(255, 255, 255, 0);
     background-size: 22px 34px;
     &:hover,&:focus{
-      background: url(../images/arrow_right.png) center center no-repeat RGBA(255, 255, 255, .7);
+      background: $arrow_right center center no-repeat RGBA(255, 255, 255, .7);
     }
   }
   .slick-prev {
     left: 0;
-    background: url(../images/arrow_left.png) center center no-repeat RGBA(255, 255, 255, 0);
+    background: $arrow_left center center no-repeat RGBA(255, 255, 255, 0);
     background-size: 22px 34px;
     &:hover,&:focus{
-      background: url(../images/arrow_left.png) center center no-repeat RGBA(255, 255, 255, .7);
+      background: $arrow_left center center no-repeat RGBA(255, 255, 255, .7);
     }
   }
   ul.link{
@@ -523,8 +523,8 @@
         display: block;
         border-radius: 50%;
         color: #fff;
-        background: $primaryColor;
-        background: linear-gradient(155deg, $primaryColor 20%, $primaryColor 100%);
+        background: $mpcircle1;
+        background: linear-gradient(155deg, $mpcircle1 20%, $mpcircle1 100%);
         text-align: center;
         padding-top: 38px;
         margin: 0 auto;
@@ -537,8 +537,8 @@
           vertical-align: middle;
         }
         &:hover,&:focus{
-          background: $primaryColor;
-          background: linear-gradient(155deg, $primaryColor 20%, $secondaryColor 100%);
+          background: $mpcircle1;
+          background: linear-gradient(155deg, $mpcircle1 20%, $mpcircle2 100%);
           box-shadow: 0 0 0 0 transparent inset;
         }
       }
@@ -548,7 +548,7 @@
 .mp{
   .bottom_block{
     .service{
-      background: url(../images/mpbg5.jpg) no-repeat 0 bottom;
+      background: $mpbg5 no-repeat 0 bottom;
       background-size: cover;
       @include screen('mobile') {
         background:none;
@@ -582,25 +582,25 @@
           }
           &:first-child{
             a{
-              background: url(../images/service1.jpg) no-repeat 0 0;
+              background: $service1 no-repeat 0 0;
               &:after{
-                background: url(../images/service_icon1.png) no-repeat 0 0;
+                background: $service_icon1 no-repeat 0 0;
               }
             }
           }
           &:nth-child(2){
             a{
-              background: url(../images/service2.jpg) no-repeat 0 0;
+              background: $service2 no-repeat 0 0;
               &:after{
-                background: url(../images/service_icon2.png) no-repeat 0 0;
+                background: $service_icon2 no-repeat 0 0;
               }
             }
           }
           &:nth-child(3){
             a{
-              background: url(../images/service3.jpg) no-repeat 0 0;
+              background: $service3 no-repeat 0 0;
               &:after{
-                background: url(../images/service_icon3.png) no-repeat 0 0;
+                background: $service_icon3 no-repeat 0 0;
               }
             }
           }
@@ -666,7 +666,7 @@
       }
     }
     .resource{
-      background: url(../images/mpbg6.jpg) no-repeat center center;
+      background: $mpbg6 no-repeat center center;
       background-size: cover;
       .container{
         padding: 0 60px 35px 60px;
@@ -751,14 +751,14 @@
               width: 14px;
               display: inline-block;
               margin-left: 20px;
-              background: url(../images/basic/icon_more_.png) no-repeat 0 0;
+              background: $more_ no-repeat 0 0;
               vertical-align: middle;
             }
             &:hover,&:focus{
               background: #333;
               color: #fff;
               &:after{
-                background: url(../images/basic/icon_more.png) no-repeat 0 0;
+                background: $more no-repeat 0 0;
               }
             }
           }

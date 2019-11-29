@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- hyUI css -->
-  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/copyright.css">
   <!-- favicon -->
   <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
@@ -445,6 +445,20 @@
         <!-- footer End -->
       </div>
       <a href="javascript:;" class="scrollToTop">回頁首</a>
+
+      <!-- 測試換顏色，正式上線請刪除此div及js -->
+      <div class="ColorSet" style="position: fixed;right: 0;top: 45%;">
+        <a href="javascript:mm_changeStyle('css/patents.css');" class="" style="display: block;padding: 10px;background: #770f5a;color: #fff;">patents</a>
+        <a href="javascript:mm_changeStyle('css/trademarks.css');" class="" style="display: block;padding: 10px;background: #016ccf;color: #fff;">trademarks</a>
+        <a href="javascript:mm_changeStyle('css/copyright.css');" class="" style="display: block;padding: 10px;background: #008477;color: #fff;">copyright</a>
+      </div>
+      <script type="text/javascript">
+        　 function mm_changeStyle(file){
+          　　 document.getElementById("cssStyle").setAttribute("href",file);
+        }
+      </script>    
+      <!-- 測試換顏色，正式上線請刪除此div及js end-->
+      
       <!-- JQ -->
       <script src="js/jquery-3.3.1.min.js"></script>
       <!-- 外掛 plugin js -->

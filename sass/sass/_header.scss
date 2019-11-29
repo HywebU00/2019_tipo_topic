@@ -2,8 +2,8 @@
 .header {
   position: relative;
   z-index: 99;
-  background: rgb(9,145,140);
-  background: linear-gradient(90deg, rgba(9,145,140,1) 20%, rgba(23,178,116,1) 100%);
+  background: $gb;
+  background: linear-gradient(90deg, $gb 20%, $gg 100%);
   @extend %clearfix;
   @include screen('mobile') {
     position: fixed;
@@ -92,9 +92,13 @@
     left: 20px;
     a {
       display: inline-block;
+      width: 190px;
+      height: 55px;
+      background: $logo no-repeat 0 0;
+      text-indent: -9999px;
     }
     img {
-      display: block;
+      display: none;
       max-width: 190px;
       max-height: 55px;
     }
