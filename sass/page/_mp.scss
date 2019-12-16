@@ -141,6 +141,11 @@
     z-index: 9;
     .slick-slide{
       background: $primaryColor;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: stretch;
+      align-content: stretch;
       img{
         object-fit:cover;
         margin: 0 auto;
@@ -296,7 +301,8 @@
           @include screen('mobile') {
             box-shadow: 1px 0 5px rgba(0,0,0,0);
           }
-          &:hover{
+          &:hover,&:focus{
+            color: $primaryColor;
             text-decoration: underline;
           }
           &:hover .news_pic:after{
@@ -455,7 +461,7 @@
       color: #222;
       &:hover,&:focus{
         color: $primaryColor;
-        box-shadow: 0 0 0 0 transparent inset;
+        text-decoration: underline;
       }
     }
     .topic_pic{

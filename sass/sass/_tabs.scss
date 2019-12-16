@@ -36,7 +36,8 @@
       @include text-overflow;
       @include box-sizing;
       &:hover {
-        background: #b7b7b7;
+        background: $primaryColor;
+        border-bottom: 4px solid $primaryColor;
         color: #fff;
       }
     }

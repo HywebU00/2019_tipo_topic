@@ -36,8 +36,8 @@
     vertical-align: top;
     @include text-overflow;
     position:relative;
-    background: $npbg no-repeat right bottom,rgb(9,145,140);
-    background: $npbg no-repeat right bottom ,linear-gradient(90deg, rgba(9,145,140,1) 50%, rgba(23,178,116,1) 100%);
+    background: $npbg no-repeat right bottom,$gb;
+    background: $npbg no-repeat right bottom ,linear-gradient(90deg, $gb 50%, $gg 100%);
     .num{
       position: absolute;
       width:1em;

@@ -2,24 +2,27 @@
   padding: .1em 0em .1em;
   font-size: .9375em;
   margin: 0px auto 40px;
-  ul {
-    @include li-reset;
-    li {
+  @include screen('mobile') {
+   margin: 0px auto 20px;
+ }
+ ul {
+  @include li-reset;
+  li {
+    display: inline-block;
+    margin: 0px .1em .1em 0px;
+    &:before {
+      @extend %slash;
+    }
+    &:first-child:before {
+      content: "";
       display: inline-block;
-      margin: 0px .1em .1em 0px;
-      &:before {
-        @extend %slash;
-      }
-      &:first-child:before {
-        content: "";
-        display: inline-block;
-        color: #666;
-        margin-left: 0;
-        padding: 0;
-      }
+      color: #666;
+      margin-left: 0;
+      padding: 0;
     }
   }
-  a {
-    @include aSetting_nocolor;
-  }
+}
+a {
+  @include aSetting_nocolor;
+}
 }

@@ -128,9 +128,25 @@ h1.title, h2.title {
       vertical-align: top;
     }
     tr{
-      border-bottom: 1px dotted #ccc;
+      border-bottom: 1px dotted #bbb;
       &:last-of-type{
         border-bottom: 0;
+      }
+    }
+    td{
+      em,strong{
+        color: #fff;
+        font-style: normal;
+        padding: 0 5px 2px 5px;
+        border-radius: 3px;
+        margin: 0 2px;
+        font-weight: normal;
+      }
+      em{
+        background: $primaryColor;  
+      }
+      strong{
+        background: $color-orange;
       }
     }
     table{
@@ -212,19 +228,17 @@ div.tag {
     counter-reset: counter;
     list-style-type: none;
     padding: 0;
-    margin-left: 1em;
-    @media screen and (max-width: 767px) {
-      margin-left: 0;
-    }
+    // margin-left: 1em;
+    // @media screen and (max-width: 767px) {
+    //   margin-left: 0;
+    // }
   }
   li {
     position: relative;
-    margin-bottom: 10px;
-    padding-left: 1em;
     border-bottom: 1px solid #EEE;
     clear: both;
     overflow: hidden;
-    padding-bottom: .5em;
+    padding: 5px 0px 5px 1.8em;
     span {
       @include screen('mobile') {
         display: block;
@@ -233,10 +247,9 @@ div.tag {
     }
     &:before {
             position: absolute; // outline: 1px solid red;
-            top: .8em;
-            left: .2em;
+            top: 22px;
+            left: .8em;
             text-align: right;
-            width: 30px;
             width: 6px;
             height: 6px;
             border-radius: 50%;
@@ -261,9 +274,9 @@ div.tag {
         width: auto;
         margin-top: 0;
       }
-      @include screen('xs_mobile') {
-        display: none;
-      }
+      // @include screen('xs_mobile') {
+      //   display: none;
+      // }
     }
     .update {
       // width: 150px;
@@ -324,7 +337,7 @@ div.tag {
               display: inline-block;
               margin-right: 4px;
               text-indent: -9999px;
-              margin-bottom: 4px;
+              vertical-align: text-bottom;
             }
             &.doc{
               background: url(../images/basic/icon_doc.jpg);
@@ -362,129 +375,6 @@ div.tag {
             &.other{
               background: url(../images/basic/icon_other.jpg);
             }
-            // &:after {
-            //   content: "";
-            //   background: url(../images/basic/icon_file.png) no-repeat center center;
-            //   background-size: contain;
-            //   width: 26px;
-            //   height: 28px;
-            //   position: absolute;
-            //   top: 3px;
-            //   left: 3px;
-            //   text-align: right;
-            // }
-            // word系列
-            // &[href$="doc"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_doc.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="docx"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_docx.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="odt"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_odt.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // // excel系列
-            // &[href$="xls"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_xls.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="csv"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_csv.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="ods"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_ods.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="xlsx"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_xlsx.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // // pdf系列
-            // &[href$="pdf"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_pdf.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="ppt"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_ppt.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="pptx"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_pptx.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="odp"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_odp.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // // 其他格式
-            // &[href$="zip"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_zip.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="txt"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_txt.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="mov"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_mov.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="mp3"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_mp3.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="jpg"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_jpg.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="wmv"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_wmv.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
-            // &[href$="mp4"] {
-            //   &:after {
-            //     background: url(../images/basic/icon_mp4.png) no-repeat center center;
-            //     background-size: contain;
-            //   }
-            // }
           }
         }
       }
@@ -515,17 +405,17 @@ div.tag {
     counter-reset: counter;
     list-style-type: none;
     padding: 0;
-    margin-left: 1em;
-    @media screen and (max-width: 767px) {
-      margin-left: 0;
-    }
+    // margin-left: 1em;
+    // @media screen and (max-width: 767px) {
+    //   margin-left: 0;
+    // }
   }
   li {
     position: relative;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     border-bottom: 1px solid #EEE;
     a {
-      padding: .2em 0px .2em 35px;
+      padding: 10px 0px 10px 35px;
       position: relative;
       height: auto;
       line-height: 1.45em;
@@ -533,7 +423,7 @@ div.tag {
       @include aSetting_nocolor;
       &:before {
                 position: absolute; // outline: 1px solid red;
-                top: 5px;
+                top: 10px;
                 left: 0px;
                 text-align: right;
                 width: 30px;

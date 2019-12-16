@@ -196,7 +196,7 @@
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            color: #008477;
+            color: $primaryColor;
           }
           span.title{
             margin-bottom: 0;
@@ -364,6 +364,9 @@
     label{
       text-align: right;
       font-weight: bold;
+      @include screen('mobile') {
+        text-align: left;
+      }
     }
     .form_grid{
       border-top: 0;
@@ -373,7 +376,7 @@
       .form_title{
         @include screen('mobile') {
           float: none;
-          padding-top: 0;
+          padding: 0;
         }
       }
       .form_content{

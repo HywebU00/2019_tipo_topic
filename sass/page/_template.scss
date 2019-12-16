@@ -50,6 +50,9 @@ body {
 .innerpage {
   >.container {
     padding: 40px;
+    @include screen('mobile') {
+      padding: 20px;
+    }
   }
 }
 .innerpage {

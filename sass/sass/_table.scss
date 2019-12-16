@@ -11,7 +11,7 @@ table {
     text-align: left;
   }
   td {
-    border: #ddd 1px solid;
+    border: #ccc 1px solid;
     word-break: break-all;
     a {
       word-break: break-all;
@@ -59,7 +59,7 @@ table {
             border: none !important;
             border-bottom: 1px solid #eee !important;
             position: relative;
-            padding-left: 35% !important;
+            // padding-left: 35% !important;
             white-space: normal;
             text-align: left;
             &:before {
@@ -67,7 +67,7 @@ table {
               position: absolute;
               top: .5em;
               left: .5em;
-              width: 30%;
+              // width: 30%;
               padding-right: 10px;
               white-space: nowrap;
               text-align: left;
