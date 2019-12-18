@@ -22,15 +22,15 @@
     &:focus {
       color: #FFF;
             // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
-            background: $gb;
-            // border: 1px solid darken($primaryColor, 15);
-            border: 1px solid $primaryColor;
+            background: $primaryColor;
+            border: 1px solid darken($primaryColor, 5);
             box-shadow: none;
           }
           &.active {
             color: #FFF;
             // background: linear-gradient(-180deg, $primaryColor 20%, $secondaryColor 100%);
-            background: $gb;
+            background: $primaryColor;
+            border: 1px solid darken($primaryColor, 5);
             // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
           }
           span {
@@ -42,6 +42,48 @@
             &:after {
               content: ")";
               display: inline-block;
+            }
+          }
+        }
+      }
+      .category2{
+        padding: .8em 1em .3em 1em;
+        margin-bottom: 1em;
+        background: #ddd;
+        overflow: hidden;
+        border-radius: 5px;
+        ul{
+          @include li-reset;
+          li{
+            float: left;
+            margin-right: .8em;
+            margin-bottom: .5em;
+            white-space: nowrap;
+            a{
+              background: #eee;
+              color: #222;
+              padding: .2em .5em;
+              display: block;
+              border-radius: 3px;
+              border: 1px solid #fff;
+              &:before{
+                content: "";
+                width: 4px;
+                height: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 50%;
+                background: darken($secondaryColor, 17);
+                margin-right: 5px;
+              }
+              &:hover,&:focus,&.active{
+                background: darken($secondaryColor, 12);
+                color: #fff;
+                border: 1px solid darken($secondaryColor, 17);
+                &:before{
+                  background: $secondaryColor;
+                }
+              }
             }
           }
         }

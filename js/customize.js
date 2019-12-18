@@ -41,6 +41,29 @@ $(function() {
             }
         }]
     });
+    $('.bottom_block .service ul.link').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 960,
+            settings: {
+                slidesToShow: 2
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
     $('.video ul').slick({
         mobileFirst: true,
         dots: true,
