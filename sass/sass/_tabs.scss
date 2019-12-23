@@ -1,7 +1,7 @@
 .tabSet {
   max-width: 100%;
   margin: 1em auto;
-  overflow: hidden;
+  // overflow: hidden;
   @extend %clearfix;
   @include screen('mobile') {
     width: auto;
@@ -69,7 +69,7 @@
   left: 0;
   right: 0;
   clear: both;
-  padding: 30px 20px;
+  padding: 30px 0 90px 0;
   display: none;
   @include screen('mobile') {
     position: static;
@@ -94,5 +94,8 @@
       font-size: .813em;
       color: #666;
     }
+  }
+  .more{
+    right: 0px!important;
   }
 }
