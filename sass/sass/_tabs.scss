@@ -36,15 +36,15 @@
       @include text-overflow;
       @include box-sizing;
       &:hover {
-        background: $primaryColor;
-        border-bottom: 4px solid $primaryColor;
+        background: $tabColor;
+        border-bottom: 4px solid $tabColor;
         color: #fff;
       }
     }
     &.active>a {
-      border-bottom: 4px solid $primaryColor;
+      border-bottom: 4px solid $tabColor;
       &:hover{
-        background: $primaryColor;
+        background: $tabColor;
         color: #fff;
       }
     }

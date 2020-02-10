@@ -3,17 +3,20 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor:				#008477;				//主色 
-$secondaryColor:			#19b0cb; 				//輔色
+$primaryColor:				#6817a7;				//主色 
+$secondaryColor:			#ce0dd1; 				//輔色
 $lightColor:				#FCC211;				//點綴
-$linkColor:					#026259;				//連結
+$linkColor:					#382149;				//連結
 $importantColor:			#FF3E4D;				//重要
-$gb:						#09918c;
-$gg:						#17b274;
-$mpcircle1:					#1d355d;
-$mpcircle2:					#2c72a8;
-$menuColor:					#21BAFF;
-$menuColor-hover:			#17b274;
+$gb:						#5e10a7;
+$gg:						#a40bb2;
+$mpcircle1:					#680da4;
+$mpcircle2:					$secondaryColor;
+$menuColor:					$secondaryColor;
+$menuColor-hover:			#AA5AC5;
+$tabColor:					#b90bb4;
+$textColor:					$linkColor;
+$thColor:					#754b96;
 // 但注意真實顏色與語意的關聯必須易於辨識
 
 $color-blue: 				#21BAFF;
@@ -27,12 +30,12 @@ $color-dark: 				#333;
 $color-hr:					#666;		  			 //hr顏色
 $color-word:				#222;                    //一般字的顏色
 // 連結顏色
-$aColor:					#008477;
-$aHover:					#026259;
+$aColor:					$primaryColor;
+$aHover:					#AA5AC5;
 
 // 表單focus顏色
-$form-focus:				#008477;				 //表單 
-$form-btn:					#19b0cb;				//表單
+$form-focus:				$primaryColor;				 //表單 
+$form-btn:					#AA5AC5;				//表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
@@ -62,7 +65,31 @@ $fatfooterBgColor: 			#f1f1f0; 				//fatFooter 底色
 
 $rounded-angle:             10px;					   //整站導角
 
+$logo:						url(../images/patents/logo.png);
 
+$arrow_right:				url(../images/patents/arrow_right.png);
+$arrow_left:				url(../images/patents/arrow_left.png);
+
+$more:						url(../images/patents/icon_more.png);
+$more_:						url(../images/patents/icon_more_.png);
+$mpbg1:						url(../images/patents/mpbg1.jpg);
+$mpbg2:						url(../images/patents/mpbg2.jpg);
+$mpbg3:						url(../images/patents/mpbg3.jpg);
+$mpbg4:						url(../images/patents/mpbg4.jpg);
+$mpbg5:						url(../images/patents/mpbg5.jpg);
+$mpbg6:						url(../images/patents/mpbg6.jpg);
+
+$service1:					url(../images/patents/service1.jpg);
+$service2:					url(../images/patents/service2.jpg);
+$service3:					url(../images/patents/service3.jpg);
+$service4:					url(../images/patents/service4.jpg);
+$service_icon1:				url(../images/patents/service_icon1.png);
+$service_icon2:				url(../images/patents/service_icon2.png);
+$service_icon3:				url(../images/patents/service_icon3.png);
+$service_icon4:				url(../images/patents/service_icon4.png);
+
+$npbg:						url(../images/patents/npbg.png);
+$fatfooter_icon:			url(../images/patents/fatfooter_icon.png);
 
 
 

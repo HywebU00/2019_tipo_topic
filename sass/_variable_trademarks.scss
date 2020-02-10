@@ -12,8 +12,11 @@ $gb:						#214673;
 $gg:						#2d7bb5;
 $mpcircle1:					#1d355d;
 $mpcircle2:					#2c72a8;
-$menuColor:					#21BAFF;
-$menuColor-hover:			#00b8d9;
+$menuColor:					$secondaryColor;
+$menuColor-hover:			#21BAFF;
+$tabColor:					$primaryColor;
+$textColor:					$linkColor;
+$thColor:					$primaryColor;
 // 但注意真實顏色與語意的關聯必須易於辨識
 
 $color-blue: 				#21BAFF;
@@ -28,7 +31,7 @@ $color-hr:					#666;		  			 //hr顏色
 $color-word:				#222;                    //一般字的顏色
 // 連結顏色
 $aColor:					$primaryColor;
-$aHover:					#2d74ab;
+$aHover:					#19b0cb;
 
 // 表單focus顏色
 $form-focus:				$primaryColor;				 //表單 
