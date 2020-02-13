@@ -162,7 +162,7 @@
       align-items: stretch;
       align-content: stretch;
       img {
-        object-fit: cover;
+        object-fit: fill;
         margin: 0 auto;
         @include screen("mobile") {
           width: 100%;
@@ -253,7 +253,7 @@
         height: 194px;
         position: relative;
         z-index: 9;
-        object-fit: cover;
+        object-fit: fill;
         @include screen("mobile") {
           width: 100%;
           height: auto;
@@ -522,7 +522,7 @@
         height: 175px;
         position: relative;
         z-index: 9;
-        object-fit: cover;
+        object-fit: fill;
         @include screen("mobile") {
           width: 100%;
           height: auto;
