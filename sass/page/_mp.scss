@@ -634,9 +634,8 @@
         display: block;
         clear: both;
         padding-bottom: 235px;
-        @include screen("mobile") {
+        @include screen("tablet") {
           padding: 30px 30px 200px 30px;
-          margin-bottom: 20px;
         }
       }
       .slick-next {
@@ -644,7 +643,7 @@
         top: 50%;
         background: $arrow_right center center no-repeat RGBA(255, 255, 255, 0);
         background-size: 22px 34px;
-        @include screen("mobile") {
+        @include screen("tablet") {
           right: 0;
         }
         &:hover,
@@ -658,7 +657,7 @@
         top: 50%;
         background: $arrow_left center center no-repeat RGBA(255, 255, 255, 0);
         background-size: 22px 34px;
-        @include screen("mobile") {
+        @include screen("tablet") {
           left: 0;
         }
         &:hover,
