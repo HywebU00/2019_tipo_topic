@@ -14,7 +14,7 @@ $mpcircle1:					#680da4;
 $mpcircle2:					$secondaryColor;
 $menuColor:					$secondaryColor;
 $menuColor-hover:			#AA5AC5;
-$tabColor:					#b90bb4;
+$tabColor:					#6c3c91;
 $textColor:					$linkColor;
 $thColor:					#754b96;
 // 但注意真實顏色與語意的關聯必須易於辨識
@@ -33,8 +33,13 @@ $color-word:				#222;                    //一般字的顏色
 $aColor:					$primaryColor;
 $aHover:					#AA5AC5;
 
+$th1:						#4c3265;
+$th2:						#5f407d;
+$th3:						#6f5489;
+$thb:						#8750bb;
+
 // 表單focus顏色
-$form-focus:				$primaryColor;				 //表單 
+$form-focus:				$tabColor;				 //表單 
 $form-btn:					#AA5AC5;				//表單
 //-------------------------------------------------------------字型--------//
 
