@@ -34,6 +34,12 @@
 		.tabs>.tabItem{
 			font-size: 1.25em;
 			position: relative;
+			a{
+				@include screen('mobile') {
+					background: #DDD;
+					border-bottom: 0;
+				}	
+			}
 			&:after {
 				height: 4px;
 				width: 30%;
@@ -48,17 +54,37 @@
 				width: 100%;
 				bottom: -.5em;
 				margin-left: 0;
+				@include screen('mobile') {
+					display: none;
+				}	
 			}
-			&.active:after {
-				content: "";
-				background: $tabColor;
+			&.active{
+				a{
+					@include screen('mobile') {
+						background: $tabColor;
+						color: #fff;
+					}	
+				}
+				&:after {
+					content: "";
+					background: $tabColor;
+				}
 			}
 		}
 		.tabContent {
 			padding: 30px 0 0 0;
+			@include screen('mobile') {
+				padding:10px 0 0 0;
+			}	
 			.form_grid{
 				margin: 0;
 				border-top: 0;
+				.form_content{
+					@include screen('mobile') {
+						padding-left: 0;
+						padding-right: 0;
+					}	
+				}
 			}
 			.form_grp{
 				border-bottom: 0;
@@ -66,9 +92,17 @@
 			.form_title{
 				font-weight: bold;
 				text-align: right;
+				@include screen('mobile') {
+					text-align: left;
+					padding-left: 0;
+					padding-right: 0;
+				}	
 			}
 			.btn_grp{
 				padding-bottom: 0;
+				@include screen('mobile') {
+					padding-bottom: 1em;
+				}	
 			}
 		}
 	}
@@ -82,6 +116,9 @@
 		@include box-sizing;
 		padding: 0.8em 1.5em 0.8em;
 		@extend %clearfix;
+		@include screen('mobile') {
+			font-size: 1.125em;
+		}
 		li {
 			width: 24%;
 			display: inline-block;
@@ -139,6 +176,9 @@
 		border: 1px solid #ccc;
 		border-top: 5px solid $thb;
 		margin: 1.5em 0;
+		@include screen('mobile') {
+			font-size: 1.125em;
+		}
 		tr{
 			th{
 				background: #fff;
@@ -157,6 +197,10 @@
 						position: relative;
 						float: right;
 						margin-top: 2px;
+						@include screen('mobile') {
+							display: block;
+							float: left;
+						}
 						&:hover,&:focus{
 							background: $th3;
 						}
@@ -243,6 +287,9 @@
 		border: 1px solid #ccc;
 		border-left: 5px solid #4bb5c8;
 		margin: 1.5em 0;
+		@include screen('mobile') {
+			font-size: 1.125em;
+		}
 		th{
 			width: 10%;
 			color: #444;
@@ -258,6 +305,9 @@
 	.ipc_table{
 		border: 1px solid #ccc;
 		margin: 1.5em 0;
+		@include screen('mobile') {
+			font-size: 1.125em;
+		}
 		tr{
 			&.lv1{
 				background: #0f7486;

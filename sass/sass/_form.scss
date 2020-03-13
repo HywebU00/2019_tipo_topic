@@ -22,6 +22,9 @@ select::-ms-expand {
   font-size: .938em;
   margin: .5em;
   border-top: 1px solid #DDD;
+  @include screen('mobile') {
+    font-size: 1.125em;
+  } 
   .form_grp {
     border-bottom: 1px dashed #DDD;
     overflow: hidden;
