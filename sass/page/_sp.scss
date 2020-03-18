@@ -88,6 +88,39 @@
 			}
 			.form_grp{
 				border-bottom: 0;
+				&.col5{
+					@include make-xs-column(12);
+					@include make-sm-column(5);
+					@include make-md-column(5);
+					@include make-lg-column(5);
+				}
+				&.col2{
+					@include make-xs-column(12);
+					@include make-sm-column(2);
+					@include make-md-column(2);
+					@include make-lg-column(2);
+					.form_content{
+						width: 100%;
+						select{
+							line-height: 2.6em;
+							height: 2.6em;
+						}
+					}
+				}
+			}
+			.form_grp.col2 ~ .form_grp.col5{
+				.form_title{
+					width: auto;
+					@include screen('mobile') {
+						width: 100%;
+					}	
+				}
+				.form_content{
+					width: calc(100% - 90px);
+					@include screen('mobile') {
+						width: 100%;
+					}	
+				}
 			}
 			.form_title{
 				font-weight: bold;
@@ -100,6 +133,7 @@
 			}
 			.btn_grp{
 				padding-bottom: 0;
+				clear: both;
 				@include screen('mobile') {
 					padding-bottom: 1em;
 				}	
