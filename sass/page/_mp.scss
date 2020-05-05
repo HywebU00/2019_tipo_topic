@@ -2,7 +2,7 @@
   position: relative;
   height: 518px;
   overflow: hidden;
-  @include screen("mobile") {
+  @include screen("tablet") {
     height: auto;
   }
   .info {
@@ -14,16 +14,16 @@
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
     font-weight: bold;
     letter-spacing: 2px;
+    // @include screen("tablet") {
+    //   text-align: center;
+    //   width: 70%;
+    // }
     @include screen("tablet") {
-      text-align: center;
-      width: 70%;
-    }
-    @include screen("mobile") {
       bottom: auto;
       left: 0;
       letter-spacing: 1px;
       top: 0;
-      padding: 20px 0;
+      padding: 20px;
       position: relative;
       width: 100%;
       background: rgba(51, 51, 51, 0.9);
@@ -32,16 +32,16 @@
       font-size: 2.25em;
       margin-bottom: 20px;
       line-height: 1em;
-      @include screen("tablet") {
-        font-size: 2em;
-        margin-bottom: 10px;
-      }
+      // @include screen("tablet") {
+      //   font-size: 2em;
+      //   margin-bottom: 10px;
+      // }
       @include screen("mobile") {
-        font-size: 1.25em;
+        font-size: 1.15em;
       }
     }
     .info_text {
-      @include screen("mobile") {
+      @include screen("tablet") {
         font-size: 0.875em;
       }
     }
@@ -58,11 +58,11 @@
     box-sizing: border-box;
     letter-spacing: 1px;
     font-weight: bold;
+    // @include screen("tablet") {
+    //   left: 50%;
+    //   margin-left: -255px;
+    // }
     @include screen("tablet") {
-      left: 50%;
-      margin-left: -255px;
-    }
-    @include screen("mobile") {
       bottom: auto;
       left: auto;
       top: auto;
@@ -82,7 +82,7 @@
       color: #e0ebea;
       padding: 20px 32px;
       position: relative;
-      @include screen("mobile") {
+      @include screen("tablet") {
         padding: 15px 30px;
         font-size: 1.125em;
       }
@@ -104,7 +104,7 @@
       padding: 2em;
       font-size: 1.0625em;
       overflow: hidden;
-      @include screen("mobile") {
+      @include screen("tablet") {
         padding: 20px 30px;
         font-size: 1em;
         background: $primaryColor;
@@ -162,7 +162,7 @@
       align-items: stretch;
       align-content: stretch;
       img {
-        object-fit: fill;
+        // object-fit: cover;
         margin: 0 auto;
         @include screen("mobile") {
           width: 100%;
@@ -174,14 +174,16 @@
       right: 70px;
       @include screen("mobile") {
         right: 10px;
-        top: 50px;
+        // top: 50px;
+        top: 50%;
       }
     }
     .slick-prev {
       left: 70px;
       @include screen("mobile") {
         left: 10px;
-        top: 50px;
+        // top: 50px;
+        top: 50%;
       }
     }
   }
