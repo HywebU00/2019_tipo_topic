@@ -152,7 +152,7 @@
     }
   }
   .mpSlider {
-    position: relative;
+    position: absolute;
     z-index: 9;
     .slick-slide {
       background: $primaryColor;
@@ -186,6 +186,12 @@
         top: 50%;
       }
     }
+  }
+  .container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 10;
   }
 }
 
