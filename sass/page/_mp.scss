@@ -23,7 +23,7 @@
       left: 0;
       letter-spacing: 1px;
       top: 0;
-      padding: 20px;
+      padding: 20px 30px;
       position: relative;
       width: 100%;
       background: rgba(51, 51, 51, 0.9);
@@ -154,6 +154,17 @@
   .mpSlider {
     position: absolute;
     z-index: 9;
+    height: 100%;
+    @include screen("tablet") {
+      position: relative;
+      height: auto;
+    }
+    .slick-list,.slick-track{
+      height: 100%;
+    }
+    .img-container{
+
+    }
     .slick-slide {
       background: $primaryColor;
       display: flex;
