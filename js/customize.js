@@ -156,15 +156,28 @@ $(function(){
         $('.advanced_search_block .advanced_search').stop().slideToggle();
     });
 });
+
+
+$(window).bind("load resize", function(e) {
+    if($(window).outerWidth() >= 992){
+       _ww=$(window).width(),
+       _cw=$(".header .container").width(),
+       _bannerTextLeft=Math.floor((_ww-_cw)/2+100);
+       $(".bannertext").css({"left":(_bannerTextLeft)+"px"});
+   }else{
+    $(".bannertext").removeAttr( 'style' );
+}
+});
+
 // lp table_list th 寬度
 $(function(){
   function plth(){
     var thWidth = 0;
     $('.table_list th').each(function(){
-      if($(this).width()>thWidth){
-        thWidth = $(this).width(); 
-    }
-});
+        if($(this).width()>thWidth){
+            thWidth = $(this).width(); 
+        }
+    });
     if ($(window).outerWidth() <= 576) { 
       var allWidth=$('.table_list table').width(),
       thRealWidth=Math.floor((thWidth/allWidth)*100);

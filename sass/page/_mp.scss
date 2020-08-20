@@ -1,32 +1,43 @@
-.info_block {
+.mp .info_block {
   position: relative;
   height: 518px;
   overflow: hidden;
   @include screen("tablet") {
     height: auto;
   }
-  .info {
+  .bannertext{
     position: absolute;
-    bottom: 280px;
-    left: 116px;
+    z-index: 999;
+    bottom: 0;
+    @include screen("tablet") {
+      position: relative;
+      bottom: auto;
+    }
+  }
+  .info {
+    // position: absolute;
+    // bottom: 280px;
+    // left: 116px;
+    position: relative;
     z-index: 10;
     color: #fff;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
     font-weight: bold;
     letter-spacing: 2px;
+    margin-bottom: 20px;
     // @include screen("tablet") {
     //   text-align: center;
     //   width: 70%;
     // }
     @include screen("tablet") {
-      bottom: auto;
-      left: 0;
+      // bottom: auto;
+      // left: 0;
       letter-spacing: 1px;
-      top: 0;
+      // top: 0;
       padding: 20px 30px;
-      position: relative;
       width: 100%;
       background: rgba(51, 51, 51, 0.9);
+      margin-bottom: 0;
     }
     .info_title {
       font-size: 2.25em;
@@ -47,9 +58,10 @@
     }
   }
   .quick_link {
-    position: absolute;
-    bottom: 0;
-    left: 88px;
+    // position: absolute;
+    // bottom: 0;
+    // left: 88px;
+    position: relative;
     z-index: 10;
     background: rgba(20, 20, 20, 0.8);
     display: block;
@@ -63,10 +75,10 @@
     //   margin-left: -255px;
     // }
     @include screen("tablet") {
-      bottom: auto;
-      left: auto;
-      top: auto;
-      position: relative;
+      // bottom: auto;
+      // left: auto;
+      // top: auto;
+      // position: relative;
       width: 100%;
       height: auto;
       margin-left: 0;
@@ -182,7 +194,7 @@
       }
     }
     .slick-next {
-      right: 70px;
+      right: 5%;
       @include screen("mobile") {
         right: 10px;
         // top: 50px;
@@ -190,7 +202,7 @@
       }
     }
     .slick-prev {
-      left: 70px;
+      left: 5%;
       @include screen("mobile") {
         left: 10px;
         // top: 50px;
