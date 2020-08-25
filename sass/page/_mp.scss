@@ -13,6 +13,7 @@
     @include screen("tablet") {
       position: relative;
       bottom: auto;
+      left: 0;
     }
   }
   .info {
@@ -132,9 +133,9 @@
         width: 50%;
         padding: 4px 0;
         position: relative;
-        @include screen("mobile") {
-          width: 100%;
-        }
+        // @include screen("mobile") {
+        //   width: 100%;
+        // }
         &:before {
           content: "";
           width: 11px;
