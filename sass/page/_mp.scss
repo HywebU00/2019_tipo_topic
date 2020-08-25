@@ -7,9 +7,9 @@
   }
   .bannertext{
     position: absolute;
-    // z-index: 999;
+    z-index: 999;
     bottom: 0;
-    left: 30%;
+    left: 15%;
     @include screen("tablet") {
       position: relative;
       bottom: auto;

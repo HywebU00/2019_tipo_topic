@@ -158,16 +158,16 @@ $(function(){
 });
 
 
-$(window).bind("load resize", function(e) {
-    if($(window).outerWidth() >= 992){
-       _ww=$(window).width(),
-       _cw=$(".header .container").width(),
-       _bannerTextLeft=Math.floor((_ww-_cw)/2+100);
-       $(".bannertext").css({"left":(_bannerTextLeft)+"px"});
-   }else{
-    $(".bannertext").removeAttr( 'style' );
-}
-});
+// $(window).bind("load resize", function(e) {
+//     if($(window).outerWidth() >= 992){
+//      _ww=$(window).width(),
+//      _cw=$(".header .container").width(),
+//      _bannerTextLeft=Math.floor((_ww-_cw)/2+100);
+//      $(".bannertext").css({"left":(_bannerTextLeft)+"px"});
+//  }else{
+//     $(".bannertext").removeAttr( 'style' );
+// }
+// });
 
 // lp table_list th 寬度
 $(function(){
