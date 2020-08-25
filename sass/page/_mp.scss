@@ -7,7 +7,6 @@
   }
   .bannertext{
     position: absolute;
-    z-index: 999;
     bottom: 0;
     left: 15%;
     @include screen("tablet") {
@@ -167,7 +166,7 @@
   }
   .mpSlider {
     position: absolute;
-    z-index: 9;
+    z-index: -1;
     height: 100%;
     @include screen("tablet") {
       position: relative;
