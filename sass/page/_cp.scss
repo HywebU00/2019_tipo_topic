@@ -141,6 +141,7 @@ h1.title, h2.title {
         border-radius: 3px;
         margin: 0 2px;
         font-weight: normal;
+        white-space: nowrap;
       }
       em{
         background: $primaryColor;  
