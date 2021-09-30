@@ -157,6 +157,12 @@ h1.title, h2.title {
         padding: 1em;
       }
     }
+    ul{
+      padding-left: 19px;
+    }
+    ol{
+      padding-left: 18px;
+    }
   }
   .law_table{
     @include screen('mobile') {
