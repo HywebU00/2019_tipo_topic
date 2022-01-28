@@ -147,15 +147,15 @@
         }
         &>a {
           display: block;
-          padding-left: 2em;
+          padding-left: 2.8em;
           position: relative;
           line-height: 1.45em;
           color: $color-word;
           span.num {
-            width: 1.5em;
+            width: 2.5em;
             text-align: right;
             position: absolute;
-            top: 0;
+            top: 3px;
             left: 0;
             &:after {
               content: ".";
